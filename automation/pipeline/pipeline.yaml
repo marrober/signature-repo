@@ -1,0 +1,20 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  labels:
+    app.kubernetes.io/instance: signature-server
+    pipeline.openshift.io/type: kubernetes
+  name: build-signature-server
+spec:
+  params:
+  - name: args
+    type: array
+  tasks:
+  - name: build
+    params:
+      - name: ARGS
+        value:
+        - $(params.args)
+    taskRef:
+      kind: ClusterTask
+      name: openshift-client

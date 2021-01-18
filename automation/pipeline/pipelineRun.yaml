@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: build-signature-server-pr-
+spec:
+  pipelineRef:
+    name: build-signature-server
+  params:
+    - name: args
+      value:
+      - start-build
+      - signature-server

@@ -1,0 +1,12 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: signature-server-listener-interceptor
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - name: github-listener
+      bindings:
+        - ref: signature-server-pipeline-binding
+      template:
+        name: signature-server-trigger-pipeline-template

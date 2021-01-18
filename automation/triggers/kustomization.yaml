@@ -1,0 +1,5 @@
+resources:
+- eventListenerRoute.yaml
+- eventListener.yaml
+- triggerBinding.yaml
+- triggerTemplate.yaml
