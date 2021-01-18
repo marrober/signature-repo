@@ -4,11 +4,6 @@ metadata:
   name: signature-server-trigger-pipeline-template
 spec:
   params:
-  - name: gitrevision
-    description: The git revision
-    default: master
-  - name: gitrepositoryurl
-    description: The git repository url
   - name: service-account
     description: The ServiceAccount under which to run the Pipeline.
   - name: args
@@ -27,7 +22,3 @@ spec:
         value:
         - start-build
         - signature-server
-      - name: revision
-        value: $(params.gitrevision)
-      - name: url
-        value: $(params.gitrepositoryurl)

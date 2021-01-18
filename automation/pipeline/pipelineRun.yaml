@@ -3,6 +3,7 @@ kind: PipelineRun
 metadata:
   generateName: build-signature-server-pr-
 spec:
+  serviceAccountName: pipeline
   pipelineRef:
     name: build-signature-server
   params:
