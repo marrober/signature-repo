@@ -4,5 +4,3 @@ metadata:
   name: signature-server-pipeline-binding
 spec:
   params:
-  - name: service-account
-    value: pipeline

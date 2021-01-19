@@ -4,8 +4,6 @@ metadata:
   name: signature-server-trigger-pipeline-template
 spec:
   params:
-  - name: service-account
-    description: The ServiceAccount under which to run the Pipeline.
   - name: args
     description: arguments for the oc task
   resourcetemplates:
@@ -14,7 +12,6 @@ spec:
     metadata:
       generateName: build-signature-server-pr-tr-
     spec:
-      serviceAccountName: $(params.service-account)
       pipelineRef:
         name: build-signature-server
       params:
