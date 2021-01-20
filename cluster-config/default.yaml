@@ -1,0 +1,3 @@
+docker:
+  quay.io:
+    sigstore: http://signature-server-signature-server.apps.cluster-ec4f.ec4f.example.opentlc.com/images

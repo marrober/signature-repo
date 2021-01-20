@@ -1,0 +1,23 @@
+{
+    "default": [
+        {
+            "type": "insecureAcceptAnything"
+        }
+    ],
+    "transports":
+        {
+            "docker": {
+              "quay.io": [
+                {
+                  "type": "signedBy",
+                  "keyType": "GPGKeys",
+                  "keyPath": "/etc/pki/developers/signer-key.pub"
+                }
+              ]
+            },
+            "docker-daemon":
+                {
+                    "": [{"type":"insecureAcceptAnything"}]
+                }
+        }
+}

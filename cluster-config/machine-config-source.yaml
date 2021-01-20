@@ -1,0 +1,27 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+ labels:
+   machineconfiguration.openshift.io/role: worker
+ name: 50-worker-signatures
+spec:
+ config:
+   ignition:
+     version: 2.2.0
+   storage:
+     files:
+     - path: /etc/containers/policy.json
+       mode: 0644
+       filesystem: root
+       contents:
+         source: data:,policy-json-placeholder
+     - path: /etc/containers/registries.d/default.yaml
+       mode: 0644
+       filesystem: root
+       contents:
+         source: data:,default-yaml-placeholder
+     - path: /etc/pki/developers/signer-key.pub
+       mode: 0644
+       filesystem: root
+       contents:
+         source: data:,encoded-signer-pub-placeholder
