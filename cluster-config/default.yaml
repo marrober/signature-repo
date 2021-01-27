@@ -1,3 +1,3 @@
 docker:
   quay.io:
-    sigstore: http://signature-repo-git-signature-server.apps.cluster-quay-rhp-0c95.quay-rhp-0c95.example.opentlc.com/images
+    sigstore: http://signature-server-signature-server.apps.cluster-8105.8105.example.opentlc.com/images
