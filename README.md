@@ -1,1 +1,1 @@
-# signature-repo
+# signature-repo and signing process
