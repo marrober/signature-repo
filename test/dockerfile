@@ -1,0 +1,3 @@
+FROM quay.io/marrober/simple-rest:latest-signed
+
+RUN  touch /tmp/fred
